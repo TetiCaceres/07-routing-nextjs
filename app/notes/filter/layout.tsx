@@ -3,8 +3,8 @@ import css from './LayoutNotes.module.css';
 
 type Props = {
   children: React.ReactNode;
-  sidebar: React.ReactNode;
-  modal: React.ReactNode;
+  sidebar?: React.ReactNode;
+  modal?: React.ReactNode;
 };
 
 const FilterLayout = ({ children, sidebar, modal }: Props) => {
