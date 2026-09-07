@@ -1,10 +1,11 @@
+
 import {
   QueryClient,
   HydrationBoundary,
   dehydrate,
 } from '@tanstack/react-query';
 import { fetchNoteById } from '@/lib/api';
-import NotePreview from '@/components/NotePreview/NotePreview';
+import NotePreviewClient from './NotePreview.client';
 
 interface InterceptedNoteModalProps {
   params: Promise<{ id: string }>;
@@ -23,7 +24,7 @@ export default async function InterceptedNoteModal({
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <NotePreview id={id} />
+      <NotePreviewClient id={id} />
     </HydrationBoundary>
   );
 }

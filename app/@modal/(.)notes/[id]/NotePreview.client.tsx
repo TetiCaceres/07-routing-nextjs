@@ -1,4 +1,4 @@
-// components/NotePreview/NotePreview.tsx
+
 'use client';
 
 import { useRouter } from 'next/navigation';
@@ -12,7 +12,7 @@ interface NotePreviewProps {
   id: string;
 }
 
-export default function NotePreview({ id }: NotePreviewProps) {
+export default function NotePreviewClient({ id }: NotePreviewProps) {
   const router = useRouter();
 
   const {
